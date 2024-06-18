@@ -20,7 +20,6 @@
 		<!-- Title -->
 		<title>Goldenkids - Dashboard</title>
 
-
 		<!-- *************
 			************ Common Css Files *************
 		************ -->
@@ -45,8 +44,8 @@
 		<link rel="stylesheet" href="vendor/chartist/css/chartist-custom.css" />
 
 		<!-- Calendar css -->
-		<link rel="stylesheet" href="vendor/calendar/css/core/main.css" />
-		<link rel="stylesheet" href="vendor/calendar/css/daygrid/main.css" />
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 	</head>
 
@@ -182,7 +181,7 @@
 
 							<li>
 								<a href="calendar.html">
-									<i class="icon-cog"></i>
+									<i class="icon-calendar1"></i>
 									<span class="menu-text">Calendar</span>
 								</a>
 							</li>							
@@ -225,18 +224,14 @@
 						<a id="toggle-sidebar" href="#">
 							<i class="icon-list"></i>
 						</a>
-						
 						<a id="pin-sidebar" href="#">
 							<i class="icon-list"></i>
 						</a>
 					</div>
-
 					<!-- <div class="img_logo">
 						<img src="img/Logog.png"/>
 					</div> -->
-					
 					<div class="header-items">
-						
 
 						<!-- Header actions start -->
 						<ul class="header-actions">
@@ -304,8 +299,8 @@
 											<h5>Zyan Ferris</h5>
 											<p>Admin</p>
 										</div>
-										<a href="user-profile.html"><i class="icon-user1"></i> My Profile</a>
-										<a href="account-settings.html"><i class="icon-settings1"></i> Account Settings</a>
+										<a href="#"><i class="icon-user1"></i> My Profile</a>
+										<a href="#"><i class="icon-settings1"></i> Account Settings</a>
 										<a href="login.html"><i class="icon-log-out1"></i> Sign Out</a>
 									</div>
 								</div>
@@ -414,8 +409,8 @@
 
 					<!-- Row starts -->
 					<div class="row gutters">
-						<div class="col-xl-9 col-sm-12 col-12">
-							<div class="card h-350">
+						<div class="col-xl-6 col-sm-12 col-12">
+							<div class="card h-400">
 								<div class="card-header">
 									<div class="card-title">Orders, Visits, and Revenue By Channel</div>
 								</div>
@@ -424,43 +419,32 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-3 col-sm-12 col-12">
-									<div class="row gutters">
-										<div class="col-xl-12 col-sm-6 col-12">
-											<div class="overview-box h-167">
-												<h4>Overview</h4>
-												<p>Q4 finished strong in terms of sales and orders, with revenue at 150% of goal.</p>
-											</div>
-										</div>
-										<div class="col-xl-12 col-sm-6 col-12">
-											<div class="overview-box orange h-167">
-												<h4>Trend</h4>
-												<p>Most of the sales spike was driven by search and social in December. Apple category had the most
-													sales.</p>
-											</div>
-										</div>
-									</div>
+						<div class="col-xl-6 col-sm-12 col-12">
+
+							<div class="card m-0">
+								<div class="card-body">
+									<div id="calendar"></div>
 								</div>
+							</div>
+
+						</div>
 					</div>
 					<!-- Row end -->
 
 					<!-- Row start -->
 					<div class="row gutters">
 						<div class="col-xl-6 col-sm-12 col-12">
-
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title">Basic Pie Graph Monochrome</div>
+									<div class="card-title">Basic Column Graph</div>
 								</div>
 								<div class="card-body">
-									<div id="basic-pie-graph-monochrome"></div>
+									<div id="basic-column-graph" class="primary-graph"></div>
 								</div>
 							</div>
 
 						</div>
-
 						<div class="col-xl-6 col-sm-12 col-12">
-
 							<div class="card">
 								<div class="card-header">
 									<div class="card-title">Basic Pie Graph Monochrome Gradient</div>
@@ -469,8 +453,9 @@
 									<div id="basic-pie-graph-monochrome-gradient"></div>
 								</div>
 							</div>
-
 						</div>
+						
+						
 					</div>
 					<!-- Row end -->
 				</div>
@@ -540,6 +525,13 @@
 		<script src="vendor/apex/ecommerce-dashboard/by-channel.js"></script>
 		<script src="vendor/apex/ecommerce-dashboard/orders-visits-bouncerate.js"></script>
 
+		<script src="vendor/apex/apexcharts.min.js"></script>
+		<script src="vendor/apex/examples/column/basic-column-graph.js"></script>
+		<script src="vendor/apex/examples/column/basic-column-graph-datalables.js"></script>
+		<script src="vendor/apex/examples/column/basic-column-stack-graph.js"></script>
+		<script src="vendor/apex/examples/column/basic-column-stack-graph-fullheight.js"></script>
+		<script src="vendor/apex/examples/column/basic-column-graph-rotated-labels.js"></script>
+
 		<!-- Google Maps -->
 		<!-- Below Maps Key is for demo purpose. Please replace the API with your account. Do not use below Key in your project -->
 		<script async defer
@@ -548,11 +540,7 @@
 
 
 		<!-- Fullcalendar -->
-		<script src="vendor/calendar/js/core/main.min.js"></script>
-		<script src="vendor/calendar/js/daygrid/main.min.js"></script>
-		<script src="vendor/calendar/js/interaction/main.min.js"></script>
-		<script src="vendor/calendar/js/timegrid/main.min.js"></script>
-		<script src="vendor/calendar/js/custom-selectable-calendar.js"></script>
+		
 
 		<script src="vendor/apex/examples/pie/basic-pie-graph-monochrome.js"></script>
 		<script src="vendor/apex/examples/pie/basic-pie-graph-monochrome-gradient.js"></script>
@@ -572,6 +560,9 @@
 
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+		<script src="js/main1.js"></script>
+
+ 		<script src="js/popper.js"></script>
 
 	</body>
 

@@ -157,11 +157,6 @@ $(function () {
 
 
 
-
-
-
-
-
 // Custom Sidebar JS
 jQuery(function ($) {
 
@@ -252,6 +247,12 @@ jQuery(function ($) {
 			}
 		});
 	});
+
+
+
+	//Calender
+
+	
 
 
 });
