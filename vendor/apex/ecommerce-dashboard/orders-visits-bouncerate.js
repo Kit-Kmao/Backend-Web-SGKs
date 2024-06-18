@@ -1,6 +1,6 @@
 var options = {
 	chart: {
-		height: 455,
+		height: 250,
 		type: 'line',
 		stacked: false,
 		toolbar: {
@@ -99,7 +99,7 @@ var options = {
 	],
 	legend: {
 		horizontalAlign: 'center',
-		offsetY: 10
+		offsetY: -10
 	}
 }
 
