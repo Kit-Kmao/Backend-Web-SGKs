@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Backend-Web-SGKs"
+    "liveServer.settings.multiRootWorkspaceName": "Backend-Web-SGKs",
+    "liveServer.settings.port": 5501
 }
