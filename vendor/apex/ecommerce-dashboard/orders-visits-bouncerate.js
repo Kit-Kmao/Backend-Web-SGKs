@@ -1,6 +1,6 @@
 var options = {
 	chart: {
-		height: 250,
+		height: 455,
 		type: 'line',
 		stacked: false,
 		toolbar: {
